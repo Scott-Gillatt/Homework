@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="kittyList">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kitty List</title>
+</head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+crossorigin="anonymous">
+<link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+<link rel="stylesheet" href="style/styles.css">
+
+<body ng-controller="KittyController">
+    <div class="container-fluid">
+        <!--Asking user to enter in a kitties names-->
+        <div class="row text-center">
+            <form>
+                <h1>Enter in a kitties name to see if you own the kitty:<input type="text" id="catInput" placeholder="Alfred"><button onclick="checkcat()">Sumbit</button> </h1>
+            </form>
+        </div>
+        <!-- Drawing the kitties on the screen -->
+        <div class="row text-center">
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="flip col-sm-10" ng-repeat="cat in Kitty track by $index">
+                    <div class="card">
+                        <div class="face front">
+                            <img ng-src="{{cat.url}}" height="80">
+                        </div>
+                    </div>
+                    {{cat.title}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/kitty-service.js"></script>
+    <script src="app/kitty-controller.js"></script>
+
+</body>
+
+</html>
