@@ -1,6 +1,6 @@
 app.directive('questionAnswer', function(){
     return{
-        template:'<div class="panel panel-default"><div class = "panel-body"><div class="answer-padding">{{a.score}} <strong>Answer:</strong><div class="answer"> "{{a.text}}"</div></div><div class="text-right">'
+        template:'<div class="panel panel-default"><div class = "panel-body">{{a.score}} <strong>Answer:</strong><div class="answer"> "{{a.text}}"</div><div class="text-right">'
         +
         'answered: [{{a.date}}]<br>By: {{a.author}}</div></div></div>'
     }
