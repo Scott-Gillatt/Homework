@@ -19,13 +19,11 @@
                 Asked: {{q.date}}, {{q.author}}
             </div>
             <br>
-            <br>
             <div ng-repeat="a in q.answers">
                 <question-answer> </question-answer>
                 <div ng-repeat="c in a.comments">
                     <question-comments> </question-comments>
                 </div>
-                <br>
             </div>
         </div>
     </div>
