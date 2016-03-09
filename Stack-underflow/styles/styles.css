@@ -1,0 +1,10 @@
+.answer-padding{
+    padding-left: 10px;   
+}
+.comments-padding{
+    padding-left: 60px;
+}
+.panel{
+    border-left: none;
+    border-right: none;
+}

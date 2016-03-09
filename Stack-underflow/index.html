@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Stack">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body ng-controller="StackController">
+    <br>
+    <div class="container">
+        <strong>Question:</strong>
+        <div ng-repeat="q in question">
+            {{q.text}}
+            <div class="text-right">
+                Asked: {{q.date}}, {{q.author}}
+            </div>
+            <br>
+            <br>
+            <div ng-repeat="a in q.answers">
+                <question-answer> </question-answer>
+                <div ng-repeat="c in a.comments">
+                    <question-comments> </question-comments>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/controller.js"></script>
+    <script src="app/services/dataservice.js"></script>
+    <script src="app/partial/_questionAnswer.js"></script>
+    <script src="app/partial/_questionComments.js"></script>
+
+</body>
+
+</html>
