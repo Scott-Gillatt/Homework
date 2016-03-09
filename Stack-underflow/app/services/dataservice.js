@@ -1,12 +1,5 @@
-app.factory("StackService", function(){
-    var service = {
-        getNames : function (){
-        return ["Scott", "John", "Aaron"]
-        }
-    }
-    return service
-    
-     var question = {
+app.factory("StackService", function() {
+    var question = {
         text: "What is an IIFE in JavaScript?",
         author: "Scott Gillatt",
         date: "Mar 8' 16 at 08:30",
@@ -91,5 +84,11 @@ app.factory("StackService", function(){
             }]
 
     }
-    return question
+    var service = {
+        getQuestion: function() {
+            return question;
+        },
+    }
+    return service
+
 })
